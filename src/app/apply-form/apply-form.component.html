@@ -1,0 +1,40 @@
+<div class="p-3">
+  <form [formGroup]="applyForm" (submit)="submitApplication()">
+    <p class="form-label fw-bold">Apply now to live here</p>
+
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control form-control-sm"
+        id="floatingFName"
+        placeholder="First Name"
+        formControlName="firstName"
+      />
+      <label class="form-label" for="floatingFName">First Name</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control form-control-sm"
+        id="floatingLName"
+        placeholder="Last Name"
+        formControlName="lastName"
+      />
+      <label class="form-label" for="floatingLName">Last Name</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control form-control-sm"
+        id="floatingEmail"
+        placeholder="Email"
+        formControlName="email"
+      />
+      <label class="form-label" for="floatingEmail">Email</label>
+    </div>
+
+    <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+  </form>
+</div>

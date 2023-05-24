@@ -1,0 +1,18 @@
+<div class="card" style="width: 18rem">
+  <img
+    [src]="housingLocation.photo"
+    class="card-img-top"
+    style="height: 240px; width: 100%; object-fit: cover"
+    alt="Exterior photo of {{ housingLocation.name }}"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ housingLocation.name }}</h5>
+    <p class="card-text">
+      <i class="bi bi-geo-alt-fill"></i> {{ housingLocation.city }}
+      {{ housingLocation.state }}
+    </p>
+    <a [routerLink]="['/details', housingLocation.id]" class="btn btn-sm btn-primary"
+      >Learn More <i class="bi bi-arrow-right"></i
+    ></a>
+  </div>
+</div>

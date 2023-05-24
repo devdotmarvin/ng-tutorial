@@ -1,0 +1,44 @@
+<article>
+  <div class="row">
+    <div class="col-md-6 p-3">
+      <img
+        [src]="housingLocation?.photo"
+        class="card-img-top"
+        style="height: 500px; width: 100%; object-fit: cover; border-radius: 12px;"
+        alt="Exterior photo of {{ housingLocation?.name }}"
+      />
+    </div>
+    <div class="col-md-6 p-3">
+      <div>
+        <h3>{{ housingLocation?.name }}</h3>
+        <p>
+          <i class="bi bi-geo-alt-fill"></i> {{ housingLocation?.city }}
+          {{ housingLocation?.state }}
+        </p>
+      </div>
+
+      <div>
+        <p>
+          <i class="bi bi-house-check"></i> Units Available
+          <span class="badge bg-secondary">{{
+            housingLocation?.availableUnits
+          }}</span>
+        </p>
+        <p>
+          <i class="bi bi-wifi"></i> Does this location have wifi?
+          <span class="badge bg-secondary">{{ housingLocation?.wifi }}</span>
+        </p>
+        <p>
+          <i class="bi bi-basket"></i> Does this location have laundry?
+          <span class="badge bg-secondary">
+            {{ housingLocation?.laundry }}</span
+          >
+        </p>
+      </div>
+
+      <div class="container mt-3">
+        <app-apply-form></app-apply-form>
+      </div>
+    </div>
+  </div>
+</article>

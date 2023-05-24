@@ -1,0 +1,33 @@
+<section>
+  <form>
+    <div class="row">
+      <div class="col-lg-10 p-2">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter city name..."
+          #filter
+        />
+      </div>
+      <div class="col-lg-2 p-2">
+        <button
+          type="submit"
+          (click)="filterResults(filter.value)"
+          class="btn btn-primary"
+        >
+          Filter by city
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div
+    class="container p-5 d-flex align-items-center justify-content-around gap-3 flex-wrap"
+  >
+    <app-housing-location
+      *ngFor="let housingLocation of filteredLocationList"
+      [housingLocation]="housingLocation"
+    >
+    </app-housing-location>
+  </div>
+</section>
